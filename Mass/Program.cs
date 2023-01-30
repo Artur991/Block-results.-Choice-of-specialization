@@ -10,6 +10,7 @@ int rowcount = Convert.ToInt32(Console.ReadLine());
 string [] array = new string [rowcount]; //1 создание размера
 
 fillArray(array);
+printArray(array);
 
 void fillArray(string[] array)         // 2 заполнение массива с клавиатуры
 {
@@ -17,4 +18,16 @@ void fillArray(string[] array)         // 2 заполнение массива 
     {
         array[i] = Console.ReadLine(); 
     }
+}
+
+
+void printArray(string[] array)  // 3 вывод массива на экран
+{
+    Console.Write("[ ");
+    for(int i = 0; i < array.Length; i++)
+    {  
+        Console.Write(array[i] + ",  "); 
+    }
+    Console.Write("]");
+    Console.WriteLine();
 }
