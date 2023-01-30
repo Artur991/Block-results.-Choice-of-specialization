@@ -10,7 +10,11 @@ int rowcount = Convert.ToInt32(Console.ReadLine());
 string [] array = new string [rowcount]; //1 создание размера
 
 fillArray(array);
+Console.WriteLine("Массив полученных данных");
 printArray(array);
+Console.WriteLine("Для сортировки нажмите Enter");
+Console.ReadLine();
+Console.WriteLine("Вывод отсортированых данных");
 printSortArray(array);
 
 void fillArray(string[] array)         // 2 заполнение массива с клавиатуры
@@ -27,22 +31,22 @@ void printArray(string[] array)  // 3 вывод массива на экран
     Console.Write("[ ");
     for(int i = 0; i < array.Length; i++)
     {  
-        Console.Write(array[i] + ",  "); 
+        Console.Write(array[i] + " "); 
     }
     Console.Write("]");
     Console.WriteLine();
 }
 
 
-void printSortArray(string[] array)
+void printSortArray(string[] array) 
 {
     Console.Write("[ ");
     for(int i = 0; i < array.Length; i++)
     {
         int temp1 = array[i].Length;
-           if (temp1 <= 3)
+           if (temp1 <= 3)              // 4 сортировка элементов 
            {
-            Console.Write(array[i] + "  ");
+            Console.Write(array[i] + " ");  // вывод полученных данных
            }
     }
     Console.Write("]");
